@@ -16,15 +16,12 @@ export default function Login() {
     }
 
     const showStatus = (e) => {
-
         if (email.trim() !== "" && password.trim() !== "") {
             setLoginSuccess(true);
+            setErrorMessage("Login Successful !!!");
+        } else {
+            setErrorMessage("Please fill all the fields.");
         }
-        document.getElementById("toast-success").classList.remove("invisible");
-        document.getElementById("toast-success").classList.add("visible");
-        setTimeout(() => {
-            window.location.href = '/';
-        }, 2000)
     }
 
     return (
@@ -45,16 +42,15 @@ export default function Login() {
 
                 <button onClick={showStatus} type="button" className="form-btn">Submit</button>
 
-                {loginSuccess && (<div id="toast-success" className="mt-5 flex items-center w-full max-w-xs p-4 rounded-lg border border-gray-700 shadow text-white bg-green-800 invisible" role="alert">
+                <div id="toast-success" className={`mt-5 flex items-center w-full max-w-xs p-4 rounded-lg border border-gray-700 shadow text-white ${loginSuccess ? "bg-green-800" : "bg-red-800"} ${errorMessage ? "visible" : "invisible"}`} role="alert">
                     <div className="text-sm font-medium">
-                        Login Successful !
+                        {errorMessage}
                     </div>
                 </div>
-                )}
 
                 <div className="text-center mt-12 mb-6">
                     <p> Or Sign Up Using </p>
-                    <Link to="/register" className="uppercase text-sky-400">Sign UP</Link>
+                    <Link to="/Unicode-Task-2/register" className="uppercase text-sky-400">Sign UP</Link>
                 </div>
             </form>
         </div>
