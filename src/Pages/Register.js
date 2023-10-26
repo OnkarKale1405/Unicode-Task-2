@@ -41,10 +41,6 @@ export default function Register() {
         document.getElementById("register-comp").classList.add("bg-gray-200");
     }
 
-    // console.log(fullName) ;
-    // console.log(mail) ;
-    // console.log(pass) ;
-
     return (
         <div id="register-comp" className="container h-auto w-1/2 flex mt-24 justify-center m-auto p-4">
             <form id="registerForm" className="w-2/3 bg-gray-200 flex flex-col items-center justify-center rounded-2xl">
@@ -86,7 +82,7 @@ export default function Register() {
                 <button onClick={showdetails} type="button" className="form-btn">Sign UP</button>
 
                 <div className="text-center mt-12 mb-6">
-                    <p>Already a user ? <Link to="/login" className="uppercase text-blue-400">Login In</Link></p>
+                    <p>Already a user ? <Link to="/Unicode-Task-2/login" className="uppercase text-blue-400">Login In</Link></p>
                 </div>
             </form>
 
