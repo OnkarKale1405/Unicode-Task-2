@@ -11,7 +11,7 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import ErrorPage from "./Pages/ErrorPage";
 
-// Layout
+// Layou
 import RootLayout from "./Layouts/RootLayout";
 
 const router = createBrowserRouter(

@@ -8,15 +8,15 @@
 }
 
 /* Form */
-.field{
+/* .field{
     @apply flex flex-col text-2xl w-1/2 my-4 ;
 }
 
 .field input {
     @apply focus:bg-gray-200 focus:bg-transparent focus:border-white bg-gray-200 border-b border-gray-500 text-sm px-3 py-2 ;
-}
+} */
 
-.form-control{
+/* .form-control{
     @apply border-white mt-1;
 }
 
@@ -26,4 +26,4 @@
 
 .form select {
     @apply px-4 py-2 ;
-}
+} */

@@ -1,4 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom"
+import Home from "../Pages/Home"
 
 export default function RootLayout() {
     return (
@@ -7,10 +8,6 @@ export default function RootLayout() {
                 <nav className="flex justify-end bg-gray-200 border-b-2 border-gray-400 items-center">
                     <h1 className="mr-auto p-4 text-2xl ml-24 text-gray-800
                     cursor-pointer max-sm:ml-4">Your LOGO</h1>
-                    
-                    <NavLink to="/" className={({isActive}) =>`btn max-sm:m-0
-                    ${isActive?"bg-orange-400":"bg-grey-100 text-white" }
-                    `} >Home</NavLink>
 
                     <NavLink to="login" className={({isActive}) => `btn max-sm:m-0
                     ${isActive?"bg-orange-400":"bg-grey-100 text-white" }
@@ -23,6 +20,7 @@ export default function RootLayout() {
             </header>
 
             <main>
+                <Home />
                 <Outlet />
             </main>
         </div>
